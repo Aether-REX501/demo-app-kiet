@@ -1,6 +1,6 @@
-#pipeline or workflow name
-name: Integration pipeline
-#events that trigger the workflow
+# pipeline or workflow name
+name: Integration Pipeline
+# events
 on:
   push:
     branches: [ "main" ]
@@ -24,9 +24,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: "Build app"
-    - run: echo "Building app"
-  
+    - name : "Build App"
+      run: echo "Building App"
+
   test:
 
     runs-on: ubuntu-latest
@@ -43,5 +43,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: "test app"
-    - run: echo "npm test"3
+    - name : "Testing App"
+      run: echo "npm test"
